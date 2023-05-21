@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Java Script Загадки</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        button {
+            display: block;
+            margin: 100px auto;
+            width: 200px;
+            height: 50px;
+            font: bold 24px Arial;
+            color: blueviolet;
+            border-radius: 25px;
+            text-transform: uppercase;
+        }
+    </style>
+
+    <script>
+        function game() {
+            let count = 0;
+            let mystery1 = prompt('Загадка 1. Отворилась тихо дверь, и вошел усатый зверь. Сел у печки, жмурясь сладко, и умылся мягкой лапкой.');
+
+            if (mystery1 == null) alert('Game over');
+
+            if (mystery1.toLowerCase() === 'кот' || mystery1.toLowerCase() === 'кошка' || mystery1.toLowerCase() === 'котик' || mystery1.toLowerCase() === 'киса'){
+                count++;
+                alert('Правильно');
+            } else {
+                alert('Неправильно');
+            }
+
+            let mystery2 = prompt('Загадка 2. Водяные мастера строят дом без топора.');
+
+            if (mystery2 == null) alert('Game over');
+
+            if (mystery2.toLowerCase() === 'бобёр' || mystery2.toLowerCase() === 'бобры' || mystery2.toLowerCase() === 'бобр' || mystery2.toLowerCase() === 'бобер') {
+                count++;
+                alert('Правильно');
+            } else {
+                alert('Неправильно');
+            }
+
+            let mystery3 = prompt('Загадка 3. По веткам скачет, да не птица, рыжая, да не лисица.');
+
+            if (mystery3 == null) alert('Game over');
+
+            if (mystery3.toLowerCase() === 'белка' || mystery3.toLowerCase() === 'белочка') {
+                count++;
+                alert('Правильно');
+            } else {
+                alert('Неправильно');
+            }
+
+            alert(`Правильных ответов: ${count}`);
+        }
+
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="game();">начать</button>
+</body>
+
+</html>
